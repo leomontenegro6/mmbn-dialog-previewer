@@ -37,9 +37,9 @@
       }]
     },
     "configuration": {
-      "title": "InYourFace",
+      "title": "MMBN Dialog Previewer",
       "properties": {
-          "InYourFace.error.usewarnings": {
+          "MmbnDialogPreviewer.error.usewarnings": {
               "type": "boolean",
               "default": false,
               "description": "Should take in account warnings"
