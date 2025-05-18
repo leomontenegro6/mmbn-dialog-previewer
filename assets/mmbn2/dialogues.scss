@@ -1,0 +1,170 @@
+#text-window.mmbn2_dialogues {
+  width: 240px;
+
+  span.block {
+    display: block;
+    width: 240px;
+    height: 64px;
+    background: url('dialogues.png');
+    background-repeat: no-repeat;
+    line-height: 1;
+    margin-bottom: 5px;
+
+    span.letters {
+      position: relative;
+      top: 8px;
+      left: 64px;
+      
+      span.letter {
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: url('dialogues_font.png');
+        background-position: 0 0;
+
+        &.space{ background-position: 0 0; }
+        &.n0{ background-position: -8px 0; }
+        &.n1{ background-position: -16px 0; }
+        &.n2{ background-position: -24px 0; }
+        &.n3{ background-position: -32px 0; }
+        &.n4{ background-position: -40px 0; }
+        &.n5{ background-position: -48px 0; }
+        &.n6{ background-position: -56px 0; }
+        &.n7{ background-position: -64px 0; }
+        &.n8{ background-position: -72px 0; }
+        &.n9{ background-position: -80px 0; }
+        &.a{ background-position: -88px 0; }
+        &.b{ background-position: -96px 0; }
+        &.c{ background-position: -104px 0; }
+        &.d{ background-position: -112px 0; }
+        &.e{ background-position: -120px 0; }
+
+        &.f{ background-position: 0 -16px; }
+        &.g{ background-position: -8px -16px; }
+        &.h{ background-position: -16px -16px; }
+        &.i{ background-position: -24px -16px; }
+        &.j{ background-position: -32px -16px; }
+        &.k{ background-position: -40px -16px; }
+        &.l{ background-position: -48px -16px; }
+        &.m{ background-position: -56px -16px; }
+        &.n{ background-position: -64px -16px; }
+        &.o{ background-position: -72px -16px; }
+        &.p{ background-position: -80px -16px; }
+        &.q{ background-position: -88px -16px; }
+        &.r{ background-position: -96px -16px; }
+        &.s{ background-position: -104px -16px; }
+        &.t{ background-position: -112px -16px; }
+        &.u{ background-position: -120px -16px; }
+
+        &.v{ background-position: 0 -32px; }
+        &.w{ background-position: -8px -32px; }
+        &.x{ background-position: -16px -32px; }
+        &.y{ background-position: -24px -32px; }
+        &.z{ background-position: -32px -32px; }
+        &.A{ background-position: -40px -32px; }
+        &.B{ background-position: -48px -32px; }
+        &.C{ background-position: -56px -32px; }
+        &.D{ background-position: -64px -32px; }
+        &.E{ background-position: -72px -32px; }
+        &.F{ background-position: -80px -32px; }
+        &.G{ background-position: -88px -32px; }
+        &.H{ background-position: -96px -32px; }
+        &.I{ background-position: -104px -32px; }
+        &.J{ background-position: -112px -32px; }
+        &.K{ background-position: -120px -32px; }
+
+        &.L{ background-position: 0 -48px; }
+        &.M{ background-position: -8px -48px; }
+        &.N{ background-position: -16px -48px; }
+        &.O{ background-position: -24px -48px; }
+        &.P{ background-position: -32px -48px; }
+        &.Q{ background-position: -40px -48px; }
+        &.R{ background-position: -48px -48px; }
+        &.S{ background-position: -56px -48px; }
+        &.T{ background-position: -64px -48px; }
+        &.U{ background-position: -72px -48px; }
+        &.V{ background-position: -80px -48px; }
+        &.W{ background-position: -88px -48px; }
+        &.X{ background-position: -96px -48px; }
+        &.Y{ background-position: -104px -48px; }
+        &.Z{ background-position: -112px -48px; }
+
+        &.minus{ background-position: -8px -64px; }
+        &.equal{ background-position: -24px -64px; }
+        &.colon{ background-position: -32px -64px; }
+        &.interrogation{ background-position: -40px -64px; }
+        &.plus{ background-position: -48px -64px; }
+        &.asterisk{ background-position: -72px -64px; }
+        &.exclamation{ background-position: -80px -64px; }
+        &.percent{ background-position: -96px -64px; }
+        &.ampersand{ background-position: -104px -64px; }
+        &.comma{ background-position: -112px -64px; }
+
+        &.dot{ background-position: 0 -80px; }
+        &.semicolon{ background-position: -16px -80px; }
+        &.quotes{ background-position: -24px -80px; }
+        &.double-quotes{ background-position: -32px -80px; }
+        &.slash{ background-position: -48px -80px; }
+        &.open-parenthesis{ background-position: -56px -80px; }
+        &.close-parenthesis{ background-position: -64px -80px; }
+        &.at-sign{ background-position: -120px -80px; }
+
+        &.less-than{ background-position: -16px -96px; }
+        &.greater-than{ background-position: -24px -96px; }
+        &.open-square-brackets{ background-position: -32px -96px; }
+        &.close-square-brackets{ background-position: -40px -96px; }
+        &.money-sign{ background-position: -56px -96px; }
+        &.cerquilha{ background-position: -64px -96px; }
+
+        &.A-grave{ background-position: 0 -112px; }
+        &.A-acute{ background-position: -8px -112px; }
+        &.A-tilde{ background-position: -16px -112px; }
+        &.A-circumflex{ background-position: -24px -112px; }
+        &.C-cedilla{ background-position: -32px -112px; }
+        &.E-acute{ background-position: -40px -112px; }
+        &.E-circumflex{ background-position: -48px -112px; }
+        &.I-acute{ background-position: -56px -112px; }
+        &.O-grave{ background-position: -64px -112px; }
+        &.O-acute{ background-position: -72px -112px; }
+        &.O-tilde{ background-position: -80px -112px; }
+        &.O-circumflex{ background-position: -88px -112px; }
+        &.O-diaeresis{ background-position: -96px -112px; }
+        &.U-acute{ background-position: -104px -112px; }
+        &.U-diaeresis{ background-position: -112px -112px; }
+
+        &.a-grave{ background-position: 0 -128px; }
+        &.a-acute{ background-position: -8px -128px; }
+        &.a-tilde{ background-position: -16px -128px; }
+        &.a-circumflex{ background-position: -24px -128px; }
+        &.c-cedilla{ background-position: -32px -128px; }
+        &.e-acute{ background-position: -40px -128px; }
+        &.e-circumflex{ background-position: -48px -128px; }
+        &.i-acute{ background-position: -56px -128px; }
+        &.o-grave{ background-position: -64px -128px; }
+        &.o-acute{ background-position: -72px -128px; }
+        &.o-tilde{ background-position: -80px -128px; }
+        &.o-circumflex{ background-position: -88px -128px; }
+        &.o-diaeresis{ background-position: -96px -128px; }
+        &.u-acute{ background-position: -104px -128px; }
+        &.u-diaeresis{ background-position: -112px -128px; }
+
+        &.unknown{
+          background-position: 0 0 !important;
+          margin-right: 1px;
+          position: relative;
+
+          &:after {
+            background: darkseagreen;
+            color: black;
+            content: 'X';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid black;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  } 
+}
