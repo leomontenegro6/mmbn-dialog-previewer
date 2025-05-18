@@ -22,20 +22,28 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
     // default webview
     this.webviewView = webviewView;
     this.setPreview(['']);
+
+    // Listen for messages from the webview, to update the configuration
+    // when the user changes the settings in the webview.
+    webviewView.webview.onDidReceiveMessage(async message => {
+      if (message.type === 'updateConfig') {
+        await vscode.workspace.getConfiguration('mmbnDialogPreviewer').update(message.key, message.value, vscode.ConfigurationTarget.Global);
+      }
+    });
   }
 
   // Setting text preview, according to the received values.
   public setPreview(textBlocks: any) {
+    const config = vscode.workspace.getConfiguration('mmbnDialogPreviewer');
+    const previewType = config.get('previewType');
+
     const webview = this.webviewView.webview;
     const stylesheetUris = {
       'main': webview.asWebviewUri(
         vscode.Uri.joinPath(this._extensionUri, "assets", "main.css")
       ),
-      'font': webview.asWebviewUri(
-        vscode.Uri.joinPath(this._extensionUri, "assets", "font.css")
-      ),
-      'fontDescriptions': webview.asWebviewUri(
-        vscode.Uri.joinPath(this._extensionUri, "assets", "font_descriptions.css")
+      'fonts': webview.asWebviewUri(
+        vscode.Uri.joinPath(this._extensionUri, "assets", "fonts.css")
       ),
     };
     const htmlUri = webview.asWebviewUri(
@@ -44,11 +52,9 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
 
     let htmlContent = fs.readFileSync(htmlUri.fsPath, 'utf8');
 
-    const typeClass = (true) ? ('block') : ('description');
-
     let previewMarkup = '';
     textBlocks.forEach((text: string) => {
-      previewMarkup += `<span class="${typeClass}"><span class="letters">`;
+      previewMarkup += `<span class="block"><span class="letters">`;
 
       for (let i = 0; i < text.length; i++) {
         let char = text.charAt(i);
@@ -64,8 +70,8 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
     });
 
     htmlContent = htmlContent.replace('${stylesheetUris.main}', stylesheetUris.main);
-    htmlContent = htmlContent.replace('${stylesheetUris.font}', stylesheetUris.font);
-    htmlContent = htmlContent.replace('${stylesheetUris.fontDescriptions}', stylesheetUris.fontDescriptions);
+    htmlContent = htmlContent.replace('${stylesheetUris.fonts}', stylesheetUris.fonts);
+    htmlContent = htmlContent.replace('${previewType}', previewType);
     htmlContent = htmlContent.replace('${previewMarkup}', previewMarkup);
 
     this.webviewView.webview.html = htmlContent;

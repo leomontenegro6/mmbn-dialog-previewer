@@ -3,3 +3,7 @@ dist
 node_modules
 .vscode-test/
 *.vsix
+assets/*.css
+assets/*.css.map
+assets/*/*.css
+assets/*/*.css.map

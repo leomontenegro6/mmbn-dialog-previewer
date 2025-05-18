@@ -1,0 +1,172 @@
+#text-window.mmbn3_chips_vwf {
+  width: 80px;
+
+  span.block {
+    display: block;
+    width: 80px;
+    height: 129px;
+    background: url('chips.png');
+    background-repeat: no-repeat;
+    line-height: 1;
+    margin-bottom: 5px;
+
+    span.letters {
+      position: relative;
+      top: 81px;
+      left: 2px;
+
+      span.letter {
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: url('chips_font_vwf.png');
+        background-position: 0 0;
+
+        /* Font sprites */
+        &.space{ width: 3px; background-position: 0 0; }
+        &.n0{ width: 7px; background-position: -8px 0; }
+        &.n1{ width: 4px; background-position: -16px 0; }
+        &.n2{ width: 7px; background-position: -24px 0; }
+        &.n3{ width: 7px; background-position: -32px 0; }
+        &.n4{ width: 7px; background-position: -40px 0; }
+        &.n5{ width: 7px; background-position: -48px 0; }
+        &.n6{ width: 7px; background-position: -56px 0; }
+        &.n7{ width: 7px; background-position: -64px 0; }
+        &.n8{ width: 7px; background-position: -72px 0; }
+        &.n9{ width: 7px; background-position: -80px 0; }
+        &.a{ width: 6px; background-position: -88px 0; }
+        &.b{ width: 6px; background-position: -96px 0; }
+        &.c{ width: 6px; background-position: -104px 0; }
+        &.d{ width: 6px; background-position: -112px 0; }
+        &.e{ width: 6px; background-position: -120px 0; }
+
+        &.f{ width: 4px; background-position: 0 -16px; }
+        &.g{ width: 6px; background-position: -8px -16px; }
+        &.h{ width: 6px; background-position: -16px -16px; }
+        &.i{ width: 2px; background-position: -24px -16px; }
+        &.j{ width: 4px; background-position: -32px -16px; }
+        &.k{ width: 6px; background-position: -40px -16px; }
+        &.l{ width: 2px; background-position: -48px -16px; }
+        &.m{ width: 6px; background-position: -56px -16px; }
+        &.n{ width: 6px; background-position: -64px -16px; }
+        &.o{ width: 6px; background-position: -72px -16px; }
+        &.p{ width: 6px; background-position: -80px -16px; }
+        &.q{ width: 6px; background-position: -88px -16px; }
+        &.r{ width: 5px; background-position: -96px -16px; }
+        &.s{ width: 6px; background-position: -104px -16px; }
+        &.t{ width: 4px; background-position: -112px -16px; }
+        &.u{ width: 6px; background-position: -120px -16px; }
+
+        &.v{ width: 6px; background-position: 0 -32px; }
+        &.w{ width: 6px; background-position: -8px -32px; }
+        &.x{ width: 6px; background-position: -16px -32px; }
+        &.y{ width: 7px; background-position: -24px -32px; }
+        &.z{ width: 7px; background-position: -32px -32px; }
+        &.A{ width: 7px; background-position: -40px -32px; }
+        &.B{ width: 6px; background-position: -48px -32px; }
+        &.C{ width: 7px; background-position: -56px -32px; }
+        &.D{ width: 7px; background-position: -64px -32px; }
+        &.E{ width: 6px; background-position: -72px -32px; }
+        &.F{ width: 6px; background-position: -80px -32px; }
+        &.G{ width: 7px; background-position: -88px -32px; }
+        &.H{ width: 7px; background-position: -96px -32px; }
+        &.I{ width: 4px; background-position: -104px -32px; }
+        &.J{ width: 7px; background-position: -112px -32px; }
+        &.K{ width: 6px; background-position: -120px -32px; }
+
+        &.L{ width: 6px; background-position: 0 -48px; }
+        &.M{ width: 7px; background-position: -8px -48px; }
+        &.N{ width: 7px; background-position: -16px -48px; }
+        &.O{ width: 7px; background-position: -24px -48px; }
+        &.P{ width: 7px; background-position: -32px -48px; }
+        &.Q{ width: 7px; background-position: -40px -48px; }
+        &.R{ width: 7px; background-position: -48px -48px; }
+        &.S{ width: 7px; background-position: -56px -48px; }
+        &.T{ width: 6px; background-position: -64px -48px; }
+        &.U{ width: 7px; background-position: -72px -48px; }
+        &.V{ width: 6px; background-position: -80px -48px; }
+        &.W{ width: 7px; background-position: -88px -48px; }
+        &.X{ width: 7px; background-position: -96px -48px; }
+        &.Y{ width: 6px; background-position: -104px -48px; }
+        &.Z{ width: 6px; background-position: -112px -48px; }
+
+        &.minus{ width: 6px; background-position: -8px -64px; }
+        &.equal{ width: 6px; background-position: -24px -64px; }
+        &.colon{ width: 3px; background-position: -32px -64px; }
+        &.interrogation{ width: 8px; background-position: -40px -64px; }
+        &.plus{ width: 6px; background-position: -48px -64px; }
+        &.asterisk{ width: 8px; background-position: -72px -64px; }
+        &.exclamation{ width: 2px; background-position: -80px -64px; }
+        &.percent{ width: 8px; background-position: -96px -64px; }
+        &.ampersand{ width: 8px; background-position: -104px -64px; }
+        &.comma{ width: 3px; background-position: -112px -64px; }
+
+        &.dot{ width: 3px; background-position: 0 -80px; }
+        &.semicolon{ width: 3px; background-position: -16px -80px; }
+        &.quotes{ width: 3px; background-position: -24px -80px; }
+        &.double-quotes{ width: 4px; background-position: -32px -80px; }
+        &.slash{ width: 8px; background-position: -48px -80px; }
+        &.open-parenthesis{ width: 8px; background-position: -56px -80px; }
+        &.close-parenthesis{ width: 8px; background-position: -64px -80px; }
+        &.at-sign{ width: 8px; background-position: -120px -80px; }
+
+        &.less-than{ width: 8px; background-position: -16px -96px; }
+        &.greater-than{ width: 8px; background-position: -24px -96px; }
+        &.open-square-brackets{ width: 8px; background-position: -32px -96px; }
+        &.close-square-brackets{ width: 8px; background-position: -40px -96px; }
+        &.money-sign{ width: 8px; background-position: -56px -96px; }
+        &.cerquilha{ width: 8px; background-position: -64px -96px; }
+
+        &.A-grave{ width: 7px; background-position: 0 -112px; }
+        &.A-acute{ width: 7px; background-position: -8px -112px; }
+        &.A-tilde{ width: 7px; background-position: -16px -112px; }
+        &.A-circumflex{ width: 7px; background-position: -24px -112px; }
+        &.C-cedilla{ width: 7px; background-position: -32px -112px; }
+        &.E-acute{ width: 7px; background-position: -40px -112px; }
+        &.E-circumflex{ width: 7px; background-position: -48px -112px; }
+        &.I-acute{ width: 4px; background-position: -56px -112px; }
+        &.O-grave{ width: 7px; background-position: -64px -112px; }
+        &.O-acute{ width: 7px; background-position: -72px -112px; }
+        &.O-tilde{ width: 7px; background-position: -80px -112px; }
+        &.O-circumflex{ width: 7px; background-position: -88px -112px; }
+        &.O-diaeresis{ width: 7px; background-position: -96px -112px; }
+        &.U-acute{ width: 7px; background-position: -104px -112px; }
+        &.U-diaeresis{ width: 7px; background-position: -112px -112px; }
+
+        &.a-grave{ width: 6px; background-position: 0 -128px; }
+        &.a-acute{ width: 6px; background-position: -8px -128px; }
+        &.a-tilde{ width: 6px; background-position: -16px -128px; }
+        &.a-circumflex{ width: 6px; background-position: -24px -128px; }
+        &.c-cedilla{ width: 6px; background-position: -32px -128px; }
+        &.e-acute{ width: 6px; background-position: -40px -128px; }
+        &.e-circumflex{ width: 6px; background-position: -48px -128px; }
+        &.i-acute{ width: 3px; background-position: -56px -128px; }
+        &.o-grave{ width: 6px; background-position: -64px -128px; }
+        &.o-acute{ width: 6px; background-position: -72px -128px; }
+        &.o-tilde{ width: 6px; background-position: -80px -128px; }
+        &.o-circumflex{ width: 6px; background-position: -88px -128px; }
+        &.o-diaeresis{ width: 6px; background-position: -96px -128px; }
+        &.u-acute{ width: 6px; background-position: -104px -128px; }
+        &.u-diaeresis{ width: 6px; background-position: -112px -128px; }
+
+        &.unknown{
+          width: 8px !important;
+          background-position: 0 0 !important;
+          margin-right: 1px;
+          position: relative;
+
+          &:after {
+            background: darkseagreen;
+            color: black;
+            content: 'X';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid black;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

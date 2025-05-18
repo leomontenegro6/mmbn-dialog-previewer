@@ -1,6 +1,0 @@
-#text-window {
-  transform: scale(2);
-  transform-origin: top left;
-  image-rendering: pixelated;
-  width: 240px;
-}

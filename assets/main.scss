@@ -1,0 +1,16 @@
+.preview-type-container {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#preview-type {
+  background-color: var(--vscode-settings-dropdownBackground);
+  color: var(--vscode-settings-dropdownForeground);
+  border-color: var(--vscode-settings-dropdownBorder);
+}
+
+#text-window {
+  transform: scale(2);
+  transform-origin: top left;
+  image-rendering: pixelated;
+}
