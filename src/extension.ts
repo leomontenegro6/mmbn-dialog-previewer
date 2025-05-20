@@ -105,7 +105,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         // Getting all text block, between braces (including tags).
-        const textBlockSelection = getTextBlock(activeTextEditor, currentLine);
+        const textBlockSelection = getTextBlock(activeTextEditor as vscode.TextEditor, currentLine);
 
         // Extracting, from the selection above, all text blocks without the tags.
         const textBlocks = extractTextBlocks(textBlockSelection);
