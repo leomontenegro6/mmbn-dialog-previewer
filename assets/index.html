@@ -5,49 +5,72 @@
     <link rel="stylesheet" href="${stylesheetUris.fonts}" />
 </head>
 <body>
-    <label class="preview-type-container">
-        <div>Preview Type:</div>
-        <select id="preview-type">
-            <optgroup label="MegaMan Battle Network">
-                <option value="mmbn1_dialogues">MMBN1 - Dialogues</option>
-                <option value="mmbn1_chips">MMBN1 - Chips</option>
-            </optgroup>
-            <optgroup label="MegaMan Battle Network 2">
-                <option value="mmbn2_dialogues">MMBN2 - Dialogues</option>
-                <option value="mmbn2_dialogues_vwf">MMBN2 - Dialogues (VWF)</option>
-                <option value="mmbn2_chips">MMBN2 - Chips</option>
-                <option value="mmbn2_chips_vwf">MMBN2 - Chips (VWF)</option>
-            </optgroup>
-            <optgroup label="MegaMan Battle Network 3">
-                <option value="mmbn3_dialogues">MMBN3 - Dialogues</option>
-                <option value="mmbn3_dialogues_vwf">MMBN3 - Dialogues (VWF)</option>
-                <option value="mmbn3_chips">MMBN3 - Chips</option>
-                <option value="mmbn3_chips_vwf">MMBN3 - Chips (VWF)</option>
-            </optgroup>
-            <optgroup label="MegaMan Battle Network 4">
-                <option value="mmbn4_dialogues">MMBN4 - Dialogues</option>
-                <option value="mmbn4_chips">MMBN4 - Chips</option>
-            </optgroup>
-        </select>
-    </label>
+    <div class="preview-config-form">
+        <label>
+            <div>Preview Type:</div>
+            <select id="preview-type">
+                <optgroup label="MegaMan Battle Network">
+                    <option value="mmbn1_dialogues">MMBN1 - Dialogues</option>
+                    <option value="mmbn1_chips">MMBN1 - Chips</option>
+                </optgroup>
+                <optgroup label="MegaMan Battle Network 2">
+                    <option value="mmbn2_dialogues">MMBN2 - Dialogues</option>
+                    <option value="mmbn2_dialogues_vwf">MMBN2 - Dialogues (VWF)</option>
+                    <option value="mmbn2_chips">MMBN2 - Chips</option>
+                    <option value="mmbn2_chips_vwf">MMBN2 - Chips (VWF)</option>
+                </optgroup>
+                <optgroup label="MegaMan Battle Network 3">
+                    <option value="mmbn3_dialogues">MMBN3 - Dialogues</option>
+                    <option value="mmbn3_dialogues_vwf">MMBN3 - Dialogues (VWF)</option>
+                    <option value="mmbn3_chips">MMBN3 - Chips</option>
+                    <option value="mmbn3_chips_vwf">MMBN3 - Chips (VWF)</option>
+                </optgroup>
+                <optgroup label="MegaMan Battle Network 4">
+                    <option value="mmbn4_dialogues">MMBN4 - Dialogues</option>
+                    <option value="mmbn4_chips">MMBN4 - Chips</option>
+                </optgroup>
+            </select>
+        </label>
+
+        <label>
+            <div>Zoom:</div>
+            <select id="zoom">
+                <option value="1x">1x</option>
+                <option value="2x">2x</option>
+                <option value="3x">3x</option>
+            </select>
+        </label>
+    </div>
     
-    <div id="text-window" class="${previewType}">${previewMarkup}</div>
+    <div id="text-window" data-preview-type="${previewType}" data-zoom="${zoom}">${previewMarkup}</div>
 
     <script>
         const vscode = acquireVsCodeApi();
         const previewTypeField = document.getElementById('preview-type');
+        const zoomField = document.getElementById('zoom');
         const textWindowDiv = document.getElementById('text-window');
 
-        const selectedPreviewType = textWindowDiv.classList[0];
+        const selectedPreviewType = textWindowDiv.getAttribute('data-preview-type');
+        const selectedZoom = textWindowDiv.getAttribute('data-zoom');
 
         previewTypeField.value = selectedPreviewType;
         previewTypeField.addEventListener('change', (e) => {
-            textWindowDiv.className = '';
-            textWindowDiv.classList.add(e.target.value);
+            textWindowDiv.setAttribute('data-preview-type', e.target.value);
 
             vscode.postMessage({
                 type: 'updateConfig',
                 key: 'previewType',
+                value: e.target.value
+            });
+        });
+
+        zoomField.value = selectedZoom;
+        zoomField.addEventListener('change', (e) => {
+            textWindowDiv.setAttribute('data-zoom', e.target.value);
+
+            vscode.postMessage({
+                type: 'updateConfig',
+                key: 'zoom',
                 value: e.target.value
             });
         });

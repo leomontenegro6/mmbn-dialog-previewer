@@ -66,6 +66,16 @@
             "mmbn4_chips"
           ],
           "description": "The chosen preview type"
+        },
+        "mmbnDialogPreviewer.zoom": {
+          "type": "string",
+          "default": "2x",
+          "enum": [
+            "1x",
+            "2x",
+            "3x"
+          ],
+          "description": "The zoom level of the preview"
         }
       }
     },

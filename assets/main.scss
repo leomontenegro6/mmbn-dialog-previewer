@@ -1,16 +1,27 @@
-.preview-type-container {
-  display: block;
+.preview-config-form {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
   margin-bottom: 10px;
-}
 
-#preview-type {
-  background-color: var(--vscode-settings-dropdownBackground);
-  color: var(--vscode-settings-dropdownForeground);
-  border-color: var(--vscode-settings-dropdownBorder);
+  label {
+    display: block;
+  }
+  select {
+    background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+  }
 }
 
 #text-window {
-  transform: scale(2);
   transform-origin: top left;
   image-rendering: pixelated;
+
+  &[data-zoom="2x"] {
+    transform: scale(2);
+  }
+  &[data-zoom="3x"] {
+    transform: scale(3);
+  }
 }

@@ -36,6 +36,7 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
   public setPreview(textBlocks: any) {
     const config = vscode.workspace.getConfiguration('mmbnDialogPreviewer');
     const previewType = config.get('previewType');
+    const zoom = config.get('zoom');
 
     const webview = this.webviewView.webview;
     const stylesheetUris = {
@@ -58,6 +59,10 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
 
       for (let i = 0; i < text.length; i++) {
         let char = text.charAt(i);
+
+        if (char == '\\') {
+          char = '"';
+        }
   
         if (char == '\n') {
           previewMarkup += '<br />';
@@ -72,6 +77,7 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
     htmlContent = htmlContent.replace('${stylesheetUris.main}', stylesheetUris.main);
     htmlContent = htmlContent.replace('${stylesheetUris.fonts}', stylesheetUris.fonts);
     htmlContent = htmlContent.replace('${previewType}', previewType);
+    htmlContent = htmlContent.replace('${zoom}', zoom);
     htmlContent = htmlContent.replace('${previewMarkup}', previewMarkup);
 
     this.webviewView.webview.html = htmlContent;
@@ -124,13 +130,13 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
     
     let key, newChar;
     for (key in charTable) {
-      if(key == char){
+      if (key == char){
         var newValue = charTable[key];
         newChar = char.replace(key, newValue);
         break;
       }
     }
-    if(typeof newChar == 'string'){
+    if (typeof newChar == 'string'){
       return newChar;
     } else {
       return 'unknown';

@@ -12,7 +12,11 @@ Tendo os scripts em TLP de um dos jogos de MegaMan Battle Network dumpados pelo 
 
 Se feito corretamente, aparecerá um ícone de uma folha de papel com uma letra "P" ao centro, que quando clicado, mostrará as prévias dos diálogos em tempo real. A prévia considera a posição do cursor de texto, tenta determinar o diálogo que o cursor está, e por fim pega seus caracteres para exibir na prévia.
 
-![alt text](image.png)
+![alt text](image1.png)
+
+Também é possível alternar entre vários tipos de prévia, bem como zoom de até 3x:
+
+![alt text](image2.png)
 
 Utilizando dessa prévia, é possível determinar quando um diálogo está próximo do limite da tela ou não, para poder ajustá-lo de acordo, sem precisar testar ingame.
 

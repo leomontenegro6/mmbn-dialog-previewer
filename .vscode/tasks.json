@@ -15,11 +15,6 @@
 				"kind": "build",
 				"isDefault": true
 			}
-		},
-		{
-			"label": "build:all",
-			"type": "shell",
-			"command": "npm run build:sass"
 		}
 	]
 }
