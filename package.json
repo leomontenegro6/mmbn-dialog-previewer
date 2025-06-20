@@ -2,7 +2,7 @@
   "name": "mmbn-dialog-previewer",
   "displayName": "MMBN Dialog Previewer",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "SolidOne",
   "engines": {
     "vscode": "^1.61.0"
@@ -63,6 +63,7 @@
             "mmbn3_chips",
             "mmbn3_chips_vwf",
             "mmbn4_dialogues",
+            "mmbn4_dialogues_vwf_ptbr",
             "mmbn4_chips"
           ],
           "description": "The chosen preview type"

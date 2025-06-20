@@ -19,7 +19,7 @@
         display: inline-block;
         width: 8px;
         height: 12px;
-        background: url('dialogues_font.png');
+        background: url('dialogues_font_vwf.png');
         background-position: 0 0;
 
         &.space{ background-position: 0 0; }
@@ -156,6 +156,7 @@
         &.O-diaeresis{ background-position: -96px -96px; }
         &.U-acute{ background-position: -104px -96px; }
         &.U-diaeresis{ background-position: -112px -96px; }
+        &.o-ordinal{ width: 8px; background-position: -120px -96px; }
 
         &.a-grave{ background-position: 0 -108px; }
         &.a-acute{ background-position: -8px -108px; }
@@ -172,6 +173,7 @@
         &.o-diaeresis{ background-position: -96px -108px; }
         &.u-acute{ background-position: -104px -108px; }
         &.u-diaeresis{ background-position: -112px -108px; }
+        &.a-ordinal{ width: 8px; background-position: -120px -108px; }
 
         &.unknown{
           background-position: 0 0 !important;
