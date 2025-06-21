@@ -96,7 +96,7 @@ export class PreviewSidebarViewProvider implements vscode.WebviewViewProvider {
       '©': 'copyright', '[': 'open-square-brackets', ']': 'close-square-brackets',
       '_': 'underscore', '¡': 'inverted-exclamation',
       '¿': 'inverted-interrogation', 'º': 'o-ordinal', 'ª': 'a-ordinal', '…': 'reticences',
-      'α': 'alpha', 'β': 'beta', 'Σ': 'sigma', 'Ω': 'omega',
+      '⋯': 'mid-reticences', 'α': 'alpha', 'β': 'beta', 'Σ': 'sigma', 'Ω': 'omega',
       
       // Numbers
       '0': 'n0', '1': 'n1', '2': 'n2', '3': 'n3', '4': 'n4', '5': 'n5',

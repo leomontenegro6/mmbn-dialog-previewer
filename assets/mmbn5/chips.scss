@@ -1,0 +1,176 @@
+#text-window[data-preview-type="mmbn5_chips"] {
+  width: 80px;
+
+  span.block {
+    display: block;
+    width: 80px;
+    height: 129px;
+    background: url('chips.png');
+    background-repeat: no-repeat;
+    line-height: 1;
+    margin-bottom: 5px;
+
+    span.letters {
+      position: relative;
+      top: 69px;
+      left: 4px;
+
+      span.letter {
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: url('chips_font.png');
+        background-position: 0 0;
+
+        &.space{ background-position: 0 0; }
+        &.n0{ background-position: -8px 0; }
+        &.n1{ background-position: -16px 0; }
+        &.n2{ background-position: -24px 0; }
+        &.n3{ background-position: -32px 0; }
+        &.n4{ background-position: -40px 0; }
+        &.n5{ background-position: -48px 0; }
+        &.n6{ background-position: -56px 0; }
+        &.n7{ background-position: -64px 0; }
+        &.n8{ background-position: -72px 0; }
+        &.n9{ background-position: -80px 0; }
+        &.A{ background-position: -88px 0; }
+        &.B{ background-position: -96px 0; }
+        &.C{ background-position: -104px 0; }
+        &.D{ background-position: -112px 0; }
+        &.E{ background-position: -120px 0; }
+
+        &.F{ background-position: 0 -16px; }
+        &.G{ background-position: -8px -16px; }
+        &.H{ background-position: -16px -16px; }
+        &.I{ background-position: -24px -16px; }
+        &.J{ background-position: -32px -16px; }
+        &.K{ background-position: -40px -16px; }
+        &.L{ background-position: -48px -16px; }
+        &.M{ background-position: -56px -16px; }
+        &.N{ background-position: -64px -16px; }
+        &.O{ background-position: -72px -16px; }
+        &.P{ background-position: -80px -16px; }
+        &.Q{ background-position: -88px -16px; }
+        &.R{ background-position: -96px -16px; }
+        &.S{ background-position: -104px -16px; }
+        &.T{ background-position: -112px -16px; }
+        &.U{ background-position: -120px -16px; }
+
+        &.V{ background-position: 0 -32px; }
+        &.W{ background-position: -8px -32px; }
+        &.X{ background-position: -16px -32px; }
+        &.Y{ background-position: -24px -32px; }
+        &.Z{ background-position: -32px -32px; }
+        &.asterisk{ background-position: -40px -32px; }
+        &.a{ background-position: -48px -32px; }
+        &.b{ background-position: -56px -32px; }
+        &.c{ background-position: -64px -32px; }
+        &.d{ background-position: -72px -32px; }
+        &.e{ background-position: -80px -32px; }
+        &.f{ background-position: -88px -32px; }
+        &.g{ background-position: -96px -32px; }
+        &.h{ background-position: -104px -32px; }
+        &.i{ background-position: -112px -32px; }
+        &.j{ background-position: -120px -32px; }
+
+        &.k{ background-position: 0 -48px; }
+        &.l{ background-position: -8px -48px; }
+        &.m{ background-position: -16px -48px; }
+        &.n{ background-position: -24px -48px; }
+        &.o{ background-position: -32px -48px; }
+        &.p{ background-position: -40px -48px; }
+        &.q{ background-position: -48px -48px; }
+        &.r{ background-position: -56px -48px; }
+        &.s{ background-position: -64px -48px; }
+        &.t{ background-position: -72px -48px; }
+        &.u{ background-position: -80px -48px; }
+        &.v{ background-position: -88px -48px; }
+        &.w{ background-position: -96px -48px; }
+        &.x{ background-position: -104px -48px; }
+        &.y{ background-position: -112px -48px; }
+        &.z{ background-position: -120px -48px; }
+
+        &.A-grave{ background-position: 0 -64px; }
+        &.A-acute{ background-position: -8px -64px; }
+        &.A-tilde{ background-position: -16px -64px; }
+        &.A-circumflex{ background-position: -24px -64px; }
+        &.C-cedilla{ background-position: -32px -64px; }
+        &.E-acute{ background-position: -40px -64px; }
+        &.E-circumflex{ background-position: -48px -64px; }
+        &.I-acute{ background-position: -56px -64px; }
+        &.O-grave{ background-position: -64px -64px; }
+        &.O-acute{ background-position: -72px -64px; }
+        &.O-tilde{ background-position: -80px -64px; }
+        &.O-circumflex{ background-position: -88px -64px; }
+        &.O-diaeresis{ background-position: -96px -64px; }
+        &.U-acute{ background-position: -104px -64px; }
+        &.U-diaeresis{ background-position: -112px -64px; }
+        &.o-ordinal{ background-position: -120px -64px; }
+
+        &.a-grave{ background-position: 0 -80px; }
+        &.a-acute{ background-position: -8px -80px; }
+        &.a-tilde{ background-position: -16px -80px; }
+        &.a-circumflex{ background-position: -24px -80px; }
+        &.c-cedilla{ background-position: -32px -80px; }
+        &.e-acute{ background-position: -40px -80px; }
+        &.e-circumflex{ background-position: -48px -80px; }
+        &.i-acute{ background-position: -56px -80px; }
+        &.o-grave{ background-position: -64px -80px; }
+        &.o-acute{ background-position: -72px -80px; }
+        &.o-tilde{ background-position: -80px -80px; }
+        &.o-circumflex{ background-position: -88px -80px; }
+        &.o-diaeresis{ background-position: -96px -80px; }
+        &.u-acute{ background-position: -104px -80px; }
+        &.u-diaeresis{ background-position: -112px -80px; }
+        &.a-ordinal{ background-position: -120px -80px; }
+
+        &.dash{ background-position: -24px -144px; }
+        &.cross1{ background-position: -32px -144px; }
+        &.equal{ background-position: -40px -144px; }
+        &.colon{ background-position: -48px -144px; }
+        &.percent{ background-position: -56px -144px; }
+        &.interrogation{ background-position: -64px -144px; }
+        &.plus{ background-position: -72px -144px; }
+        &.minus{ background-position: -96px -144px; }
+        &.exclamation{ background-position: -104px -144px; }
+
+        &.ampersand{ background-position: 0 -160px; }
+        &.comma{ background-position: -8px -160px; }
+        &.japanese-dot{ background-position: -16px -160px; }
+        &.dot{ background-position: -24px -160px; }
+        &.middot{ background-position: -32px -160px; }
+        &.quotes{ background-position: -48px -160px; }
+        &.double-quotes{ background-position: -56px -160px; }
+        &.tilde{ background-position: -64px -160px; }
+        &.slash{ background-position: -72px -160px; }
+        &.open-parenthesis{ background-position: -80px -160px; }
+        &.close-parenthesis{ background-position: -88px -160px; }
+        &.open-quote{ background-position: -96px -160px; }
+        &.close-quote{ background-position: -104px -160px; }
+        &.alpha{ background-position: -112px -160px; }
+        &.beta{ background-position: -120px -160px; }
+        
+        &.omega{ background-position: 0 -176px; }
+        &.underscore{ background-position: -16px -176px; }
+        &.zeta{ background-position: -24px -176px; }
+
+        &.unknown{
+          background-position: 0 0 !important;
+          margin-right: 1px;
+          position: relative;
+
+          &:after {
+            background: darkseagreen;
+            color: black;
+            content: 'X';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid black;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
